@@ -1,3 +1,4 @@
+let rotate = 0;
 const createDiv = (className, context) => {
     const divName = document.createElement("div");
     divName.classList.add(className);
@@ -15,6 +16,7 @@ const createButton = (buttonName, className, context) => {
 }
 
 const startAnimation = (func) => {
+    clearInterval(rotate);
     rotate = setInterval(func, 25);
 }
 
@@ -23,6 +25,7 @@ const stopAnimation = () => {
 }
  
 window.onload = () => {
+    
     const space = createDiv("space", document.body)
     const circlesSpace = createDiv("circlesSpace", space);
     const largeCircle = createDiv("largeCircle", circlesSpace);
