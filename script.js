@@ -1,4 +1,3 @@
-
 const createDiv = (className, context) => {
     const divName = document.createElement("div");
     divName.classList.add(className);
@@ -53,5 +52,4 @@ window.onload = () => {
     
     startButton.addEventListener("click", () => startAnimation(move));
     stopButton.addEventListener("click", stopAnimation);
-
 };
